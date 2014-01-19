@@ -1,6 +1,6 @@
 {
   "name": "flat-glob",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Return glob applied and flattened version of the given array",
   "main": "index.js",
   "scripts": {
