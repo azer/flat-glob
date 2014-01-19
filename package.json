@@ -1,0 +1,29 @@
+{
+  "name": "flat-glob",
+  "version": "0.0.0",
+  "description": "Return glob applied and flattened version of the given array",
+  "main": "index.js",
+  "scripts": {
+    "test": "prova"
+  },
+  "devDependencies": {
+    "prova": "*"
+  },
+  "keywords": [
+    "array",
+    "glob",
+    "flatten"
+  ],
+  "repository": {
+    "url": "git@github.com:azer/flat-glob.git",
+    "type": "git"
+  },
+  "author": "Azer Koçulu <azer@kodfabrik.com>",
+  "license": "BSD",
+  "dependencies": {
+    "glob": "~3.2.8",
+    "flatten-array": "0.0.3",
+    "uniques": "0.0.1",
+    "iter": "0.0.5"
+  }
+}
