@@ -3,9 +3,10 @@ var flatten = require("flatten-array");
 var uniques = require("uniques");
 var iter = require("iter");
 
-module.exports = flatGlob;
+module.exports = async;
+module.exports.sync = sync;
 
-function flatGlob (arr, callback) {
+function async (arr, callback) {
   var result = [];
   arr = flatten(arr);
 
@@ -26,4 +27,23 @@ function flatGlob (arr, callback) {
         next();
       });
     });
+}
+
+function sync (arr) {
+  var result = [];
+  arr = flatten(arr);
+
+  var i = -1;
+  var len = arr.length;
+
+  while (++i < len) {
+    if (arr[i].indexOf('*') == -1) {
+      result.push(arr[i]);
+      continue;
+    }
+
+    result.push(glob.sync(arr[i]));
+  }
+
+  return uniques(flatten(result));
 }

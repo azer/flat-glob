@@ -8,3 +8,7 @@ it('applies glob and returns a flat array with no duplicates', function (done){
     done();
   });
 });
+
+it('runs synchronously optionally', function(){
+  expect(flatGlob.sync(['index.js', '*.js'])).to.deep.equal(['index.js', 'test.js']);
+});
