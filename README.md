@@ -1,6 +1,6 @@
 ## flat-glob
 
-Return glob applied, flattened and duplicate filtered version of the given array
+Return glob applied, flattened and duplicate filtered version of the given list of filenames
 
 ## Install
 
