@@ -13,6 +13,13 @@ $ npm install flat-glob
 ```js
 flatGlob = require('flat-glob')
 
-flatGlob(['foo.js', 'styles/**/*.css', 'templates/index.html', 'templates/**/*.html'])
+flatGlob.sync(['foo.js', 'styles/**/*.css', 'templates/index.html', 'templates/**/*.html'])
 // => ['foo.js', 'styles/a.css', 'styles/b.css', 'templates/index.html', 'templates/foo.html', 'templates/bar.html']
+
+flatGlob(['foo.js', 'styles/**/*.css', 'templates/index.html', 'templates/**/*.html'], function (error, files) {
+  if (error) throw error
+  
+  files
+  // => ['foo.js', 'styles/a.css', 'styles/b.css', 'templates/index.html', 'templates/foo.html', 'templates/bar.html']
+})
 ```
