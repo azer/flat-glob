@@ -6,7 +6,7 @@ var iter = require("iter");
 module.exports = async;
 module.exports.sync = sync;
 
-function async (arr, callback) {
+function async (arr, options, callback) {
   var result = [];
   arr = flatten(arr);
 
@@ -20,7 +20,7 @@ function async (arr, callback) {
         return next();
       }
 
-      glob(arr[i], function (error, files) {
+      glob(arr[i], options, function (error, files) {
         if (error) return callback(error);
 
         result.push(files);
@@ -29,7 +29,7 @@ function async (arr, callback) {
     });
 }
 
-function sync (arr) {
+function sync (arr, options) {
   var result = [];
   arr = flatten(arr);
 
@@ -42,7 +42,7 @@ function sync (arr) {
       continue;
     }
 
-    result.push(glob.sync(arr[i]));
+    result.push(glob.sync(arr[i], options));
   }
 
   return uniques(flatten(result));
