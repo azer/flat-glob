@@ -22,7 +22,6 @@ function async (arr, callback) {
 
       glob(arr[i], function (error, files) {
         if (error) return callback(error);
-
         result.push(files);
         next();
       });
@@ -35,15 +34,41 @@ function sync (arr) {
 
   var i = -1;
   var len = arr.length;
+  var files = [];
 
   while (++i < len) {
-    if (arr[i].indexOf('*') == -1) {
+    if (arr[i].indexOf('*') == -1 && arr[i].indexOf('!') !== 0) {
       result.push(arr[i]);
       continue;
     }
 
-    result.push(glob.sync(arr[i]));
+    files = glob.sync(arr[i]);
+    if(arr[i].indexOf('!') !== 0){
+      result = result.concat(glob.sync(arr[i]));
+    }
+  }
+
+  i = -1;
+  while (++i < len) {
+    if (arr[i].indexOf('*') == -1 && arr[i].indexOf('!') === 0) {
+      removeEntries(result, arr[i]);
+      continue;
+    }
+
+    files = glob.sync(arr[i]);
+    if(arr[i].indexOf('!') === 0){
+      removeEntries(result, glob.sync(arr[i]));
+    }
   }
 
   return uniques(flatten(result));
+}
+
+function removeEntries(list, removes){
+  for(var i = 0; i < removes.length; i++){
+    var index = list.indexOf(removes[i]);
+    if(index > -1){
+      list.splice(index, 1);
+    }
+  }
 }
