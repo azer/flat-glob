@@ -15,11 +15,6 @@ function async (arr, callback) {
       callback(undefined, uniques(flatten(result)));
     })
     .run(function (next, i) {
-      if (arr[i].indexOf('*') == -1) {
-        result.push(arr[i]);
-        return next();
-      }
-
       glob(arr[i], function (error, files) {
         if (error) return callback(error);
 
@@ -37,11 +32,6 @@ function sync (arr) {
   var len = arr.length;
 
   while (++i < len) {
-    if (arr[i].indexOf('*') == -1) {
-      result.push(arr[i]);
-      continue;
-    }
-
     result.push(glob.sync(arr[i]));
   }
 

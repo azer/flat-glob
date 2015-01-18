@@ -1,14 +1,21 @@
-var flatGlob = require("./");
+var test = require('prova');
+var flatGlob = require('./');
 
-it('applies glob and returns a flat array with no duplicates', function (done){
+test('applies glob and returns a flat array with no duplicates', function (t){
   flatGlob(['index.js', '*.js'], function (error, files) {
-    if (error) return done(error);
+    if (error) return t.end(error);
 
-    expect(files).to.deep.equal(['index.js', 'test.js']);
-    done();
+    t.deepEqual(files, ['index.js', 'test.js']);
+    t.end();
   });
 });
 
-it('runs synchronously optionally', function(){
-  expect(flatGlob.sync(['index.js', '*.js'])).to.deep.equal(['index.js', 'test.js']);
+test('runs synchronously optionally', function(t){
+  t.deepEqual(flatGlob.sync(['index.js', '*.js']), ['index.js', 'test.js']);
+  t.end();
+});
+
+test('Supports {file1,file2} pattern', function(t){
+  t.deepEqual(flatGlob.sync(['./{index,test}.js']), ['./index.js', './test.js']);
+  t.end();
 });
