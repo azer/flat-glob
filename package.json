@@ -22,8 +22,6 @@
   "license": "BSD",
   "dependencies": {
     "glob": "~3.2.8",
-    "flatten-array": "0.0.3",
-    "uniques": "0.0.1",
-    "iter": "0.0.5"
+    "underscore": "^1.8.3"
   }
 }
