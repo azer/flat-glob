@@ -1,7 +1,7 @@
 {
-  "name": "flat-glob",
-  "version": "0.0.1",
-  "description": "Return glob applied and flattened version of the given array",
+  "name": "flatten-glob",
+  "version": "0.1.0",
+  "description": "Return glob applied and flattened version of the given array. This is a fork of flat-glob.",
   "main": "index.js",
   "scripts": {
     "test": "prova"
@@ -15,15 +15,14 @@
     "flatten"
   ],
   "repository": {
-    "url": "git@github.com:azer/flat-glob.git",
+    "url": "git@github.com:ajbogh/flatten-glob.git",
     "type": "git"
   },
-  "author": "Azer Koçulu <azer@kodfabrik.com>",
+  "author": "Allan Bogh <ajbogh@allanbogh.com>",
   "license": "BSD",
   "dependencies": {
+    "chai": "^3.5.0",
     "glob": "~3.2.8",
-    "flatten-array": "0.0.3",
-    "uniques": "0.0.1",
-    "iter": "0.0.5"
+    "underscore": "^1.8.3"
   }
 }

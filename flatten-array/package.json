@@ -1,0 +1,72 @@
+{
+  "_args": [
+    [
+      "flatten-array@0.0.3",
+      "/home/ajbogh/Projects/secondaryflow/node_modules/flatten-glob"
+    ]
+  ],
+  "_from": "flatten-array@0.0.3",
+  "_id": "flatten-array@0.0.3",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/flatten-array",
+  "_npmUser": {
+    "email": "azer@kodfabrik.com",
+    "name": "azer"
+  },
+  "_npmVersion": "1.3.5",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "flatten-array",
+    "raw": "flatten-array@0.0.3",
+    "rawSpec": "0.0.3",
+    "scope": null,
+    "spec": "0.0.3",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "/flatten-glob"
+  ],
+  "_resolved": "https://registry.npmjs.org/flatten-array/-/flatten-array-0.0.3.tgz",
+  "_shasum": "ecbba1334e95c12a022478404aafad377fe835b3",
+  "_shrinkwrap": null,
+  "_spec": "flatten-array@0.0.3",
+  "_where": "/home/ajbogh/Projects/secondaryflow/node_modules/flatten-glob",
+  "author": {
+    "email": "azer@kodfabrik.com",
+    "name": "Azer Koçulu"
+  },
+  "bugs": {
+    "url": "https://github.com/azer/flatten-array/issues"
+  },
+  "dependencies": {},
+  "description": "Flattens nested arrays.",
+  "devDependencies": {
+    "prova": "*"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "ecbba1334e95c12a022478404aafad377fe835b3",
+    "tarball": "http://registry.npmjs.org/flatten-array/-/flatten-array-0.0.3.tgz"
+  },
+  "homepage": "https://github.com/azer/flatten-array#readme",
+  "license": "BSD",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "azer",
+      "email": "azer@kodfabrik.com"
+    }
+  ],
+  "name": "flatten-array",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/azer/flatten-array.git"
+  },
+  "scripts": {
+    "test": "prova"
+  },
+  "version": "0.0.3"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "just-next-tick",
+  "version": "0.0.0",
+  "description": "Cross-platform next-tick with fallback to setTimeout.",
+  "main": "index.js",
+  "scripts": {
+    "test": "fox"
+  },
+  "devDependencies": {
+    "fox": "*"
+  },
+  "keywords": [
+    "next-tick",
+    "nextTick"
+  ],
+  "repository": {
+    "url": "git@github.com:azer\/just-next-tick.git",
+    "type": "git"
+  },
+  "author": "Azer Ko\u00e7ulu <azer@kodfabrik.com>",
+  "license": "BSD"
+}

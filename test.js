@@ -1,4 +1,5 @@
 var flatGlob = require("./");
+var expect = require("chai").expect;
 
 it('applies glob and returns a flat array with no duplicates', function (done){
   flatGlob(['index.js', '*.js'], function (error, files) {
@@ -11,4 +12,8 @@ it('applies glob and returns a flat array with no duplicates', function (done){
 
 it('runs synchronously optionally', function(){
   expect(flatGlob.sync(['index.js', '*.js'])).to.deep.equal(['index.js', 'test.js']);
+});
+
+it('runs synchronously optionally', function(){
+  expect(flatGlob.sync(['*.js', '*.md', '!README.md'])).to.deep.equal(['index.js', 'test.js']);
 });

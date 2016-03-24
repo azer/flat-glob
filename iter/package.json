@@ -1,0 +1,76 @@
+{
+  "_args": [
+    [
+      "iter@0.0.5",
+      "/home/ajbogh/Projects/secondaryflow/node_modules/flatten-glob"
+    ]
+  ],
+  "_from": "iter@0.0.5",
+  "_id": "iter@0.0.5",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/iter",
+  "_npmUser": {
+    "email": "azer@kodfabrik.com",
+    "name": "azer"
+  },
+  "_npmVersion": "1.3.5",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "iter",
+    "raw": "iter@0.0.5",
+    "rawSpec": "0.0.5",
+    "scope": null,
+    "spec": "0.0.5",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "/flatten-glob"
+  ],
+  "_resolved": "https://registry.npmjs.org/iter/-/iter-0.0.5.tgz",
+  "_shasum": "052a00448f6f5a3805b86264877835f096337324",
+  "_shrinkwrap": null,
+  "_spec": "iter@0.0.5",
+  "_where": "/home/ajbogh/Projects/secondaryflow/node_modules/flatten-glob",
+  "bugs": {
+    "url": "https://github.com/azer/iter/issues"
+  },
+  "dependencies": {
+    "just-next-tick": "0.0.0"
+  },
+  "description": "Serial & Parallel Iteration",
+  "devDependencies": {
+    "fox": "*"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "052a00448f6f5a3805b86264877835f096337324",
+    "tarball": "http://registry.npmjs.org/iter/-/iter-0.0.5.tgz"
+  },
+  "homepage": "https://github.com/azer/iter#readme",
+  "keywords": [
+    "async",
+    "iteration",
+    "loops",
+    "serial"
+  ],
+  "license": "BSD",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "azer",
+      "email": "azer@kodfabrik.com"
+    }
+  ],
+  "name": "iter",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/azer/iter.git"
+  },
+  "scripts": {
+    "test": "highkick"
+  },
+  "version": "0.0.5"
+}
