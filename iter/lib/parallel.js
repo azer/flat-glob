@@ -1,4 +1,4 @@
-var nextTick = require("just-next-tick");
+var nextTick = require("../just-next-tick");
 
 module.exports = parallel;
 
