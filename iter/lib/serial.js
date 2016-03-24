@@ -1,4 +1,4 @@
-var nextTick = require("./go");
+var nextTick = require("./just-next-tick");
 
 module.exports = serial;
 
