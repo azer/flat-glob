@@ -1,7 +1,7 @@
 var glob = require("glob");
-var flatten = require("./flatten-array/flatten-array");
+var flatten = require("./flatten-array");
 var uniques = require("underscore").uniq;
-var iter = require("./iter/index");
+var iter = require("./iter");
 
 module.exports = async;
 module.exports.sync = sync;
