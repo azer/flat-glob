@@ -21,6 +21,7 @@
   "author": "Allan Bogh <ajbogh@allanbogh.com>",
   "license": "BSD",
   "dependencies": {
+    "chai": "^3.5.0",
     "glob": "~3.2.8",
     "underscore": "^1.8.3"
   }

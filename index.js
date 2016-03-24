@@ -50,10 +50,10 @@ function sync (arr) {
 
   i = -1;
   while (++i < len) {
-    if (arr[i].indexOf('*') == -1 && arr[i].indexOf('!') === 0) {
-      removeEntries(result, arr[i]);
-      continue;
-    }
+    //if (arr[i].indexOf('*') == -1 && arr[i].indexOf('!') === 0) {
+    //  removeEntries(result, arr[i]);
+    //  continue;
+    //}
 
     files = glob.sync(arr[i]);
     if(arr[i].indexOf('!') === 0){

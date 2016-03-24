@@ -1,4 +1,5 @@
 var flatGlob = require("./");
+var expect = require("chai").expect;
 
 it('applies glob and returns a flat array with no duplicates', function (done){
   flatGlob(['index.js', '*.js'], function (error, files) {

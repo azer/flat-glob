@@ -23,3 +23,10 @@ flatGlob(['foo.js', 'styles/**/*.css', 'templates/index.html', 'templates/**/*.h
   // => ['foo.js', 'styles/a.css', 'styles/b.css', 'templates/index.html', 'templates/foo.html', 'templates/bar.html']
 })
 ```
+
+## Testing
+
+```bash
+$ npm install -g mocha
+$ mocha test.js
+```
