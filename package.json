@@ -7,7 +7,7 @@
     "test": "prova"
   },
   "devDependencies": {
-    "prova": "*"
+    "prova": "azer/prova"
   },
   "keywords": [
     "array",
