@@ -21,9 +21,9 @@
   "author": "Azer Koçulu <azer@kodfabrik.com>",
   "license": "BSD",
   "dependencies": {
-    "glob": "~3.2.8",
     "flatten-array": "0.0.3",
-    "uniques": "0.0.1",
-    "iter": "0.0.5"
+    "glob": "~3.2.8",
+    "parallel-loop": "0.0.0",
+    "uniques": "0.0.1"
   }
 }

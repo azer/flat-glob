@@ -1,7 +1,7 @@
 var glob = require("glob");
 var flatten = require("flatten-array");
 var uniques = require("uniques");
-var iter = require("iter");
+var loop = require("parallel-loop");
 
 module.exports = async;
 module.exports.sync = sync;
@@ -10,18 +10,22 @@ function async (arr, callback) {
   var result = [];
   arr = flatten(arr);
 
-  iter(arr.length)
-    .done(function () {
-      callback(undefined, uniques(flatten(result)));
-    })
-    .run(function (next, i) {
-      glob(arr[i], function (error, files) {
-        if (error) return callback(error);
+  loop(arr.length, each, function (error) {
+    if (error) {
+      return callback(error);
+    }
 
-        result.push(files);
-        next();
-      });
+    callback(undefined, uniques(flatten(result)));
+  });
+
+  function each (done, i) {
+    glob(arr[i], function (error, files) {
+      if (error) return callback(error);
+
+      result.push(files);
+      done();
     });
+  }
 }
 
 function sync (arr) {

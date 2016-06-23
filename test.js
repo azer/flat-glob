@@ -10,7 +10,7 @@ test('applies glob and returns a flat array with no duplicates', function (t){
 });
 
 test('without wildcard', function (t){
-  flatGlob(['index.js', 'test.js'], function (error, files) {
+  flatGlob(['index.js', 'test.js', 'test.js'], function (error, files) {
     t.error(error);
     t.deepEqual(files, ['index.js', 'test.js']);
     t.end();
