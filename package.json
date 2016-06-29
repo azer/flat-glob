@@ -4,10 +4,7 @@
   "description": "Return glob applied and flattened version of the given array. This is a fork of flat-glob.",
   "main": "index.js",
   "scripts": {
-    "test": "prova"
-  },
-  "devDependencies": {
-    "prova": "*"
+    "test" : "mocha test.js"
   },
   "keywords": [
     "array",
@@ -19,10 +16,10 @@
     "type": "git"
   },
   "author": "Allan Bogh <ajbogh@allanbogh.com>",
-  "license": "BSD",
+  "license": "BSD-4-Clause",
   "dependencies": {
     "chai": "^3.5.0",
-    "glob": "~3.2.8",
+    "glob": "~7.0.5",
     "underscore": "^1.8.3"
   }
 }
