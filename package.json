@@ -1,10 +1,10 @@
 {
   "name": "flatten-glob",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Return glob applied and flattened version of the given array. This is a fork of flat-glob.",
   "main": "index.js",
   "scripts": {
-    "test" : "mocha test.js"
+    "test": "mocha test.js"
   },
   "keywords": [
     "array",
