@@ -36,6 +36,7 @@ function sync (arr) {
   var len = arr.length;
   var files = [];
 
+  //this adds new files.
   while (++i < len) {
     if (arr[i].indexOf('*') == -1 && arr[i].indexOf('!') !== 0) {
       result.push(arr[i]);
@@ -48,16 +49,12 @@ function sync (arr) {
     }
   }
 
+  //this part removes files
   i = -1;
   while (++i < len) {
-    //if (arr[i].indexOf('*') == -1 && arr[i].indexOf('!') === 0) {
-    //  removeEntries(result, arr[i]);
-    //  continue;
-    //}
-
     files = glob.sync(arr[i]);
     if(arr[i].indexOf('!') === 0){
-      removeEntries(result, glob.sync(arr[i]));
+      removeEntries(result, glob.sync(arr[i].substr(1)));
     }
   }
 

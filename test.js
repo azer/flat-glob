@@ -20,5 +20,5 @@ it('tests without wildcard', function (done){
 });
 
 it('runs synchronously optionally', function(){
-  expect(flatGlob.sync(['index.js', '*.js'])).to.deep.equal(['index.js', 'test.js']);
+  expect(flatGlob.sync(['index.js', '*.js', '*.md', '!README.md'])).to.deep.equal(['index.js', 'test.js']);
 });
