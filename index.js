@@ -13,7 +13,8 @@ function async (arr, callback) {
     arr = [arr];
   }else if(!Array.isArray(arr)){
     //must be an object
-    throw new Error('Invalid property type. Must be an array of string file paths or glob patterns, or a single string.');
+    callback(new Error('Invalid property type. Must be an array of string file paths or glob patterns, or a single string.'));
+    return;
   }
   
   arr = flatten(arr);
