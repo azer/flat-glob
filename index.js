@@ -8,6 +8,14 @@ module.exports.sync = sync;
 
 function async (arr, callback) {
   var result = [];
+  
+  if(typeof arr === 'string'){
+    arr = [arr];
+  }else if(!Array.isArray(arr)){
+    //must be an object
+    throw new Error('Invalid property type. Must be an array of string file paths or glob patterns, or a single string.');
+  }
+  
   arr = flatten(arr);
 
   iter(arr.length)
@@ -30,6 +38,14 @@ function async (arr, callback) {
 
 function sync (arr) {
   var result = [];
+  
+  if(typeof arr === 'string'){
+    arr = [arr];
+  }else if(!Array.isArray(arr)){
+    //must be an object
+    throw new Error('Invalid property type. Must be an array of string file paths or glob patterns, or a single string.');
+  }
+  
   arr = flatten(arr);
 
   var i = -1;
